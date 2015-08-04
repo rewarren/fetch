@@ -1,12 +1,13 @@
 <h1> FETCH </h1>
 
+<div> Filter by animal type or click all to see a complete list of animals. </div>
 <ul>
-  <% @animals.each do |animal| %>
+  <% @species.each do |species| %>
     <li>
-      <%= link_to animal.name, animal %>
+      <%= link_to species.name, species %>
     </li>
   <% end %>
 </ul>
 
 
-<%= link_to "Add an animal", new_animal_path %>
+<%= link_to "Add an animal", new_species_animal_path %>

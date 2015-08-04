@@ -1,0 +1,9 @@
+<h1>Edit <%= "#{@species.name}" %> </h1>
+
+<p>or go <%= link_to "back", species_index_path %>
+
+<%= render 'form' %>
+
+<%= form_for @species, method: :delete do |f| %>
+<%= f.submit "Delete #{@species.name}", class: "delete" %>
+<% end %>

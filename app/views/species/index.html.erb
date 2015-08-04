@@ -1,0 +1,11 @@
+<h2>Fetch has the following species:</h2>
+
+<ul>
+  <% @species.each do |species| %>
+    <li>
+      ID <%= species.id %>: <%= species.name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add new species", new_species_path %>

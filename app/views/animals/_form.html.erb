@@ -6,9 +6,6 @@
 <%= f.label :photo_url %>
 <%= f.text_area :photo_url %>
 
-<%= f.label :species %>
-<%= f.text_area :species %>
-
 <%= f.label :age %>
 <%= f.text_area :age %>
 
@@ -17,6 +14,9 @@
 
 <%= f.label :bio %>
 <%= f.text_area :bio %>
+
+<%= f.label :species_id %>
+<%= f.references :species_id %>
 
 <%= f.submit %>
 

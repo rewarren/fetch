@@ -1,0 +1,23 @@
+<%= form_for @animal do |f| %>
+
+<%= f.label :name %>
+<%= f.text_area :name %>
+
+<%= f.label :photo_url %>
+<%= f.text_area :photo_url %>
+
+<%= f.label :species %>
+<%= f.text_area :species %>
+
+<%= f.label :age %>
+<%= f.text_area :age %>
+
+<%= f.label :gender %>
+<%= f.text_area :gender %>
+
+<%= f.label :bio %>
+<%= f.text_area :bio %>
+
+<%= f.submit %>
+
+<% end %>

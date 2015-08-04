@@ -1,7 +1,9 @@
-<h2> <%= animal.name %> </h2>
-<img class='animal-photo' src="<%= animal.photo_url %>">
+<h2> <%= @animal.name %> </h2>
+<img class='animal-photo' src="<%= @animal.photo_url %>">
 <h3>
-  <%= animal.gender %>
-  <%= animal.age %>
-  <%= animal.bio %>
+  <%= @animal.gender %>
+  <%= @animal.age %>
+  <%= @animal.bio %>
 </h3>
+
+<%= link_to "edit #{@animal.name}", edit_animal_path %>

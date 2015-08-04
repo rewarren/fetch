@@ -1,0 +1,9 @@
+<h1>Edit <%= "#{@animal.name}" %> </h1>
+
+<p>or go <%= link_to "back", animals_path %>
+
+<%= render 'form' %>
+
+<%= form_for @animal, method: :delete do |f| %>
+<%= f.submit "Delete #{@animal.name}", class: "delete" %>
+<% end %>

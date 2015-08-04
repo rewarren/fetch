@@ -5,26 +5,38 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    @animals = Animal.find(params[:id])
+    @animal = Animal.find(params[:id])
   end
 
   def new
+    @animal = Animal.new
   end
 
   def edit
+    @animal = Animal.find(params[:id])
   end
 
   def create
+    @animal = Animal.create!(animal_params)
+    redirect_to animal_path(@animal)
   end
 
   def update
+    @animal = Animal.find(params[:id])
+    @animal.update(animal_params)
+
+    redirect_to animal_path(@animal)
   end
 
   def destroy
+    @animal = Animal.find(params[:id])
+    @animal.destroy
+
+    redirect_to animals_path
   end
 
   private
   def animal_params
-    params.requrie(:animal).permit(:name, :photo_url, :species, :age, :gender, :bio)
+    params.require(:animal).permit(:name, :photo_url, :species, :age, :gender, :bio)
   end
 end

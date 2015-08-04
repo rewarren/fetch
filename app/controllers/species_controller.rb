@@ -17,7 +17,7 @@ class SpeciesController < ApplicationController
   end
 
   def create
-    @species = Species.create
+    @species = Species.create(params[:id])
     redirect_to species_path(@species)
   end
 
@@ -31,6 +31,9 @@ class SpeciesController < ApplicationController
   def destroy
   end
 
-
+  private
+  def species_params
+    params.require(:species).permit(:name)
+  end
 
 end

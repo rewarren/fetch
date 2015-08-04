@@ -1,9 +1,10 @@
 <h2>Fetch has the following species:</h2>
+<h4>Click a records to edit or delete it.</h4>
 
 <ul>
   <% @species.each do |species| %>
     <li>
-      ID <%= species.id %>: <%= species.name %>
+      <%= link_to species.name, edit_species_path(@species) %>
     </li>
   <% end %>
 </ul>

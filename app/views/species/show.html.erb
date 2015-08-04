@@ -1,14 +1,11 @@
-Success!
-
+Edit or Delete <%= @species.name %>
 <ul>
   <% @species.each do |species| %>
     <li>
-      ID <%= species.id %>: <%= species.name %>
+      <%= link_to species.name, edit_species_path %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Edit/delete species", edit_species_path %>
 <%= link_to "Add another species", new_species_path %>
 <%= link_to "Species Home", species_index_path %>
-<%= link_to "Animals Home", species_animals_path %>

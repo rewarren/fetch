@@ -3,7 +3,6 @@ class CreateAnimals < ActiveRecord::Migration
     create_table :animals do |t|
       t.string :name
       t.string :photo_url
-      t.string :species
       t.integer :age
       t.string :gender
       t.string :bio

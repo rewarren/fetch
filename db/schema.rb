@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150803215408) do
+ActiveRecord::Schema.define(version: 20150804154627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,10 +19,17 @@ ActiveRecord::Schema.define(version: 20150803215408) do
   create_table "animals", force: :cascade do |t|
     t.string  "name"
     t.string  "photo_url"
-    t.string  "species"
     t.integer "age"
     t.string  "gender"
     t.string  "bio"
+    t.integer "species_id"
   end
 
+  add_index "animals", ["species_id"], name: "index_animals_on_species_id", using: :btree
+
+  create_table "species", force: :cascade do |t|
+    t.string "name"
+  end
+
+  add_foreign_key "animals", "species"
 end

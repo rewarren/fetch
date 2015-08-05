@@ -1,4 +1,4 @@
-<%= form_for @animal do |f| %>
+<%= form_for [@variety, @animal] do |f| %>
 
 <%= f.label :name %>
 <%= f.text_area :name %>
@@ -15,7 +15,7 @@
 <%= f.label :bio %>
 <%= f.text_area :bio %>
 
-<%= f.label :variety_id %>
+<%= f.label :variety_id, "#{species.name}" %>
 <%= f.references :variety_id %>
 
 <%= f.submit %>

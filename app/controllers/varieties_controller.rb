@@ -1,7 +1,7 @@
 class VarietiesController < ApplicationController
 
   def index
-    @variety = Variety.all
+    @varieties = Variety.all
   end
 
   def show
@@ -17,7 +17,7 @@ class VarietiesController < ApplicationController
   end
 
   def create
-    @variety = Variety.create(params[:id])
+    @variety = Variety.create(variety_params)
     redirect_to variety_path(@variety)
   end
 
@@ -29,11 +29,15 @@ class VarietiesController < ApplicationController
   end
 
   def destroy
+    @variety = Variety.find(params[:id])
+    @variety.destroy
+
+    redirect_to variety_path
   end
 
   private
   def variety_params
-    params.require(:varieties).permit(:name)
+    params.require(:variety).permit(:name)
   end
 
 end

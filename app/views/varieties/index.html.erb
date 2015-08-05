@@ -4,9 +4,9 @@
 <ul>
   <% @varieties.each do |variety| %>
     <li>
-      <%= link_to variety.name, edit_varieties_path(@variety) %>
+      <%= link_to variety.name, edit_variety_path(variety) %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Add new species", new_varieties_path %>
+<%= link_to "Add new species", new_variety_path %>

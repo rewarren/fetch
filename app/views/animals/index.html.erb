@@ -2,12 +2,12 @@
 
 <div> Filter by animal type or click all to see a complete list of animals. </div>
 <ul>
-  <% @varieties.each do |variety| %>
+  <% @animals.each do |animal| %>
     <li>
-      <%= link_to variety.name, variety %>
+      <%= link_to animal.name, animal %>
     </li>
   <% end %>
 </ul>
 
 
-<%= link_to "Add an animal", new_varieties_animal_path %>
+<%= link_to "Add an animal", new_variety_animal_path %>

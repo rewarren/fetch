@@ -6,6 +6,7 @@ class CreateAnimals < ActiveRecord::Migration
       t.integer :age
       t.string :gender
       t.string :bio
+      t.references :variety, index: true, foreign_key: true
     end
   end
 end

@@ -1,3 +1,3 @@
 class Animal < ActiveRecord::Base
-  belongs_to :species
+  belongs_to :variety
 end

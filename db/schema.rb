@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804154627) do
+ActiveRecord::Schema.define(version: 20150805000630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 20150804154627) do
     t.integer "age"
     t.string  "gender"
     t.string  "bio"
-    t.integer "species_id"
+    t.integer "variety_id"
   end
 
-  add_index "animals", ["species_id"], name: "index_animals_on_species_id", using: :btree
+  add_index "animals", ["variety_id"], name: "index_animals_on_variety_id", using: :btree
 
-  create_table "species", force: :cascade do |t|
+  create_table "varieties", force: :cascade do |t|
     t.string "name"
   end
 
-  add_foreign_key "animals", "species"
+  add_foreign_key "animals", "varieties"
 end

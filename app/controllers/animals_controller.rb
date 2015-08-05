@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
 
   def index
-    @species = Species.all
+    @variety = Varieties.all
     @animals = Animal.all
   end
 
@@ -38,6 +38,6 @@ class AnimalsController < ApplicationController
 
   private
   def animal_params
-    params.require(:animal).permit(:name, :photo_url, :age, :gender, :bio, :species_id)
+    params.require(:animal).permit(:name, :photo_url, :age, :gender, :bio, :variety_id)
   end
 end

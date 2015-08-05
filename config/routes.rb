@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  root to: 'varieties#index'
+  root to: 'animals#index'
 
-  resources :varieties do
-    resources :animals
+  resources :animals do
+    resources :likes
   end
 
 end

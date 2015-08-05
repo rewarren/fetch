@@ -1,7 +1,6 @@
 class AnimalsController < ApplicationController
 
   def index
-    @variety = Variety.all
     @animals = Animal.all
   end
 
@@ -10,8 +9,6 @@ class AnimalsController < ApplicationController
   end
 
   def new
-    binding.pry
-    @variety = Variety.find(params[:variety_id])
     @animal = Animal.new
   end
 
@@ -20,7 +17,7 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = @variety.animals.create!(animal_params)
+    @animal = Animal.create!(params[:id])
     redirect_to animal_path(@animal)
   end
 

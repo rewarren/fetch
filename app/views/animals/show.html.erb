@@ -1,4 +1,9 @@
 <h2> <%= @animal.name %> </h2>
+
+<div class="luv"><%= image_tag("http://www.publicdomainpictures.net/pictures/80000/nahled/heart-pawprint.jpg", size: "45x45", alt: "Show the love", class: "heart") %>
+Luv!</div>
+
+<p>
 <img class='animal-photo' src="<%= @animal.photo_url %>">
 <h3>
   <%= @animal.gender %>
@@ -7,3 +12,4 @@
 </h3>
 
 <%= link_to "edit #{@animal.name}", edit_animal_path %>
+<%= link_to "back to Fetch home", animals_path %>

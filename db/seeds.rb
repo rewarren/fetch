@@ -22,7 +22,4 @@ Animal.create(name: "Tweety", photo_url: "https://upload.wikimedia.org/wikipedia
 
 Animal.create(name: "Fluffy", photo_url: "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=30867658", age: 50 , gender: "male", bio: "I'm a good guard dog for our home.  I also love falling asleep to the sound of music.", animal_type: "")
 
-Animal.create(name: "", photo_url: "", age: , gender: "", bio: "", animal_type: "")
-
-
 Like.create(animal: dug)

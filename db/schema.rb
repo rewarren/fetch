@@ -22,14 +22,7 @@ ActiveRecord::Schema.define(version: 20150805000630) do
     t.integer "age"
     t.string  "gender"
     t.string  "bio"
-    t.integer "variety_id"
+    t.string  "animal_type"
   end
 
-  add_index "animals", ["variety_id"], name: "index_animals_on_variety_id", using: :btree
-
-  create_table "varieties", force: :cascade do |t|
-    t.string "name"
-  end
-
-  add_foreign_key "animals", "varieties"
 end

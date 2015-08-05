@@ -1,13 +1,26 @@
-<h1> FETCH </h1>
+<h1 class="fetch"> FETCH </h1>
 
-<div> Filter by animal type or click all to see a complete list of animals. </div>
+<div>  </div>
 <ul>
   <% @animals.each do |animal| %>
-    <li>
-      <%= link_to animal.name, animal %>
+    <li class="snippet">
+    <img src="<%= animal.photo_url %>">
+
+    <%= link_to "#{animal.name}", animal_path(animal) %>
+    <%= animal.gender %>, <%= animal.age %>
+
     </li>
   <% end %>
 </ul>
 
 
 <%= link_to "Add an animal", new_animal_path %>
+
+<!--
+<ul>
+  <% @animals.each do |animal| %>
+    <li>
+      <%= link_to animal.name, animal %>
+    </li>
+  <% end %>
+</ul> -->

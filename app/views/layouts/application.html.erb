@@ -8,16 +8,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1 class="fetch"> FETCH <span class="tagline"> where the pets come out to play.</span></h1>
+
+<nav>
   <% if current_user %>
-    <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+    <h3><%= link_to 'LEAVE THE FETCH YARD', destroy_user_session_path, :method => :delete %>
   <% else %>
-    <h3><%= link_to 'Signup', new_user_registration_path %></h3>
-    <h3><%= link_to 'Login', new_user_session_path %></h3>
+    <%= link_to 'COME PLAY', new_user_session_path %> &#x1f43e;
+    <%= link_to 'JOIN FETCH', new_user_registration_path %>
+  </h3>
   <% end %>
+</nav>
 
 
-
-<%= yield %>
+  <%= yield %>
 
 
 </body>

@@ -1,5 +1,7 @@
-<h1 class="fetch"> FETCH </h1>
 
+<div class="about">Meetup group for famous pets to just be... pets. <p>
+<%= link_to "Create Your Profile", new_animal_path %> to join the yard!
+</div>
 
 <ul>
   <% @animals.each do |animal| %>
@@ -7,14 +9,14 @@
     <img src="<%= animal.photo_url %>">
 
     <%= link_to "#{animal.name}", animal_path(animal) %>
-    <%= animal.gender %>, <%= animal.age %>
+    <%= animal.gender %>, <%= animal.age %>,
+    <%= animal.user.email %>
 
     </li>
   <% end %>
 </ul>
 
 
-<%= link_to "Add an animal", new_animal_path %>
 
 <!--
 <ul>

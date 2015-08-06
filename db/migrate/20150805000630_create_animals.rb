@@ -7,6 +7,7 @@ class CreateAnimals < ActiveRecord::Migration
       t.string :gender
       t.string :bio
       t.string :animal_type
+      t.references :user
     end
   end
 end

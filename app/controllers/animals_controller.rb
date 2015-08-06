@@ -1,10 +1,11 @@
 class AnimalsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  # before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   def index
-    authenticate_user!
-    @animals = Animal.find_with_reputation(:likes, :all)
+    # authenticate_user!
+    # @animals = Animal.find_with_reputation(:likes, :all)
+    @animals = Animal.all
   end
 
   def show

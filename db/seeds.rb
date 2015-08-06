@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Animal.destroy_all
-Like.destroy_all
 
 snoopy = Animal.create(name: "Snoopy", photo_url: "http://img02.deviantart.net/08f5/i/2007/122/3/e/snoopy_dancing_by_jessie4508.jpg",
 age: 5, gender: "male", bio: "my best friend is a bird, my dog house takes me places! I love to eat and sleep.", animal_type: "dog")

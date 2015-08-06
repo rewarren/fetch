@@ -70,6 +70,37 @@ nav a:active {
   height: auto;
 }
 
+.profile {
+  float: right;
+  width: 60%;
+}
+
+.animalname {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.details {
+  font-size: 16px;
+}
+
+
+
+.animalphoto {
+  float: left;
+  padding: 3em;
+  margin: 2em;
+  border-style: solid;
+  border-width: .2em;
+  border-color: #F04A5A;
+  width: 25%;
+  height: auto;
+}
+
+.navlinks {
+  padding-top: 30px;
+}
+
 .heart {
   /*display: none;*/
 }

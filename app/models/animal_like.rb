@@ -1,4 +1,4 @@
-class AnimalLike < ActiveRecord::based
+class AnimalLike < ActiveRecord::Base
   belongs_to :animal
   belongs_to :user
 

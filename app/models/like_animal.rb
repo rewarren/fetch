@@ -1,4 +1,4 @@
-class LikesAnimals < ActiveRecord::Base
+class LikeAnimal < ActiveRecord::Base
   belongs_to :animal
   belongs_to :user
 end

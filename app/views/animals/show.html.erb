@@ -1,7 +1,10 @@
 <h2> <%= @animal.name %> </h2>
 
-<div class="luv"><%= image_tag("http://www.publicdomainpictures.net/pictures/80000/nahled/heart-pawprint.jpg", size: "45x45", alt: "Show the love", class: "heart") %>
-Luv!</div>
+<!-- <div class="luv"><%= image_tag("http://www.publicdomainpictures.net/pictures/80000/nahled/heart-pawprint.jpg", size: "45x45", alt: "Show the love", class: "heart") %>
+Luv!</div> -->
+
+<%= pluralize @animal.reputation_value_for(:likes).to_i, "luv" %>
+<%= link_to "Luv", like_animal_path(@animal, type: "up"), method: "post" %>
 
 <p>
 <img class='animal-photo' src="<%= @animal.photo_url %>">

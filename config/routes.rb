@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: 'animals#index'
-
   resources :animals do
-    resources :likes
+    member { post :like }
   end
 
+  root to: 'animals#index'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

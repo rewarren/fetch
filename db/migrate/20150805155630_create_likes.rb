@@ -1,6 +1,6 @@
-class CreateLikeAnimals < ActiveRecord::Migration
+class CreateLikes < ActiveRecord::Migration
   def change
-    create_table :like_animals do |t|
+    create_table :likes do |t|
       t.references :animal, index: true, foreign_key: true
     end
   end

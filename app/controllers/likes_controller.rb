@@ -1,8 +1,8 @@
-class LikeAnimalsController < ApplicationController
+class LikesController < ApplicationController
 
   def index
   end
-
+  
   def show
   end
 
@@ -10,10 +10,10 @@ class LikeAnimalsController < ApplicationController
   end
 
   def create
+    @animal = Animal.find(params[:post_id])
+    @like = @like.comments.create(like_params)
   end
 
-  def update
-  end
 
   def destroy
   end

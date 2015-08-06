@@ -1,10 +1,6 @@
 class AnimalsController < ApplicationController
-  before_action :set_animal, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-
 
   def index
-    # @animal = current_user.animals.build(animal_params)
     @animals = Animal.all
   end
 
@@ -41,6 +37,6 @@ class AnimalsController < ApplicationController
 
   private
   def animal_params
-    params.require(:animal).permit(:name, :photo_url, :age, :gender, :bio, :user_id)
+    params.require(:animal).permit(:name, :photo_url, :age, :gender, :bio, :variety_id)
   end
 end

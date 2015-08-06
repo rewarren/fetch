@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'animals#index'
-
   devise_for :users
+  root to: 'animals#index'
 
   resources :animals do
     resources :likes

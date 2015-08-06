@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805222834) do
+ActiveRecord::Schema.define(version: 20150805214254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,12 +23,10 @@ ActiveRecord::Schema.define(version: 20150805222834) do
     t.string  "gender"
     t.string  "bio"
     t.string  "animal_type"
-    t.integer "user_id"
   end
 
   create_table "likes", force: :cascade do |t|
     t.integer "animal_id"
-    t.integer "user_id"
   end
 
   add_index "likes", ["animal_id"], name: "index_likes_on_animal_id", using: :btree

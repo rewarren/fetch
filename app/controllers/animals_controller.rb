@@ -1,5 +1,4 @@
 class AnimalsController < ApplicationController
-  # before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   def index
@@ -26,14 +25,12 @@ class AnimalsController < ApplicationController
   def update
     @animal = Animal.find(params[:id])
     @animal.update(animal_params)
-
     redirect_to animal_path(@animal)
   end
 
   def destroy
     @animal = Animal.find(params[:id])
     @animal.destroy
-
     redirect_to animals_path
   end
 

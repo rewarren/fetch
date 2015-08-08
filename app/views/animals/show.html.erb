@@ -1,18 +1,13 @@
 <img class='animalphoto' src="<%= @animal.photo_url %>"><p>
 
 <div class="profile">
-<h2 class="animalname"> <%= @animal.name %>
-  <span class="details">(<%= @animal.gender %>,
-  <%= @animal.age %>)</span> </h2>
-
-<!-- <div class="luv"><%= image_tag("http://www.publicdomainpictures.net/pictures/80000/nahled/heart-pawprint.jpg", size: "45x45", alt: "Show the love", class: "heart") %>
-Luv!</div> -->
-
-<h3>
-  <%= @animal.bio %>
-</h3>
-<p class="navlinks">
-<%= link_to "Edit, if you're #{@animal.name}!", edit_animal_path %><p>
-<%= link_to "back to Fetch home", animals_path %>
-</p>
+  <h2 class="animalname"> <%= @animal.name %> <span class="details">(<%= @animal.gender %>, <%= @animal.age %>)</span>
+  </h2>
+  <h3>
+    <%= @animal.bio %>
+  </h3>
+    <p class="navlinks">
+      <%= link_to "Edit, if you're #{@animal.name}!", edit_animal_path %><p>
+      <%= link_to "back to Fetch home", animals_path %>
+    </p>
 </div>

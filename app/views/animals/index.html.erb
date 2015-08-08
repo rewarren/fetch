@@ -11,7 +11,7 @@
 
       <%= link_to "#{animal.name}", animal_path(animal) %>
       <%= animal.gender %>, <%= animal.age %>,
-      <%= animal.user.email %>
+      <%= animal.user.email if animal.user %>
 
     </li>
   <% end %>

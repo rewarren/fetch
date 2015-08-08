@@ -12,7 +12,11 @@
   </h3>
 
   <p class="navlinks">
-    <%= link_to "Edit, if you're #{@animal.name}!", edit_animal_path %><p>
+    <% if @animal.user_id == current_user.id %>
+    <%= link_to "Edit, if you're #{@animal.name}!", edit_animal_path %>
+    <% end %>
+  </p>
+  <p>
     <%= link_to "back to Fetch home", animals_path %>
   </p>
 

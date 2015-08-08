@@ -2,6 +2,7 @@ class AnimalsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   def index
+    authenticate_user!
     @animals = Animal.all
   end
 
@@ -36,6 +37,6 @@ class AnimalsController < ApplicationController
 
   private
   def animal_params
-    params.require(:animal).permit(:name, :photo_url, :age, :gender, :bio, :variety_id)
+    params.require(:animal).permit(:name, :photo_url, :age, :gender, :bio, :user_id)
   end
 end

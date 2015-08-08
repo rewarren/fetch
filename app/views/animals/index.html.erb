@@ -6,23 +6,12 @@
 <ul>
   <% @animals.each do |animal| %>
     <li class="snippet">
-    <img src="<%= animal.photo_url %>">
+      <img src="<%= animal.photo_url %>">
 
-    <%= link_to "#{animal.name}", animal_path(animal) %>
-    <%= animal.gender %>, <%= animal.age %>,
-    <%= animal.user.email %>
+      <%= link_to "#{animal.name}", animal_path(animal) %>
+      <%= animal.gender %>, <%= animal.age %>,
+      <%= animal.user.email %>
 
     </li>
   <% end %>
 </ul>
-
-
-
-<!--
-<ul>
-  <% @animals.each do |animal| %>
-    <li>
-      <%= link_to animal.name, animal %>
-    </li>
-  <% end %>
-</ul> -->

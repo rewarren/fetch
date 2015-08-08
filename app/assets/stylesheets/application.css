@@ -84,8 +84,6 @@ nav a:active {
   font-size: 16px;
 }
 
-
-
 .animalphoto {
   float: left;
   padding: 3em;
@@ -99,8 +97,4 @@ nav a:active {
 
 .navlinks {
   padding-top: 30px;
-}
-
-.heart {
-  /*display: none;*/
 }

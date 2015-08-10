@@ -13,9 +13,10 @@
 
 <nav>
   <% if current_user %>
-    <h3><%= link_to 'LEAVE THE FETCH YARD', destroy_user_session_path, :method => :delete %>
+    <h3>
+      Welcome! &#x1f43e; <%= link_to 'LEAVE THE FETCH YARD', destroy_user_session_path, :method => :delete %>
   <% else %>
-    <%= link_to 'COME PLAY', new_user_session_path %> &#x1f43e;
+    <%= link_to 'LOG IN TO PLAY', new_user_session_path %> &#x1f43e;
     <%= link_to 'JOIN FETCH', new_user_registration_path %>
     </h3>
   <% end %>

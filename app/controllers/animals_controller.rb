@@ -19,7 +19,7 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = Animal.create!(params[:id])
+    @animal = current_user.animal.create!(animal_params)
     redirect_to animal_path(@animal)
   end
 

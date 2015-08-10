@@ -1,18 +1,17 @@
 <div class="about">Meetup group for famous pets to just be... pets.
   <p>
-    <%= link_to "Create Your Profile", new_animal_path %> to join the yard!
+    <%= link_to "Create Your Profile", new_animal_path %> to join Fetch!
   </p>
 </div>
 
-<ul>
-  <% @animals.each do |animal| %>
-    <li class="snippet">
-      <img src="<%= animal.photo_url %>">
 
-      <%= link_to "#{animal.name}", animal_path(animal) %>
-      <%= animal.gender %>, <%= animal.age %>,
-      <%= animal.user.email if animal.user %>
-
-    </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @animals.each do |animal| %>
+      <li class="snippet">
+        <img src="<%= animal.photo_url %>">
+        <%= link_to "#{animal.name}", animal_path(animal) %>
+        <%= animal.gender %>, <%= animal.age %>,
+        <%= animal.user.email if animal.user %>
+      </li>
+    <% end %>
+  </ul>

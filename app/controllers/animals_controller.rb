@@ -2,6 +2,7 @@ class AnimalsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   def index
+    # Since you have this as a before_action that's executed bfore all of the CRUD actions, you don't need it here.
     authenticate_user!
     @animals = Animal.all
   end
@@ -19,7 +20,8 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = current_user.animal.create!(animal_params)
+    # This needs to be plural in order for it to work
+    @animal = current_user.animals.create!(animal_params)
     redirect_to animal_path(@animal)
   end
 

@@ -5,5 +5,6 @@
 <%= render 'form' %>
 
 <%= form_for @animal, method: :delete do |f| %>
+<%# Indent! %>
 <%= f.submit "Delete #{@animal.name}", class: "delete" %>
 <% end %>

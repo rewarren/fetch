@@ -12,6 +12,7 @@
   </h3>
 
   <p class="navlinks">
+    <%# Nice! The downside is this won't actually prevent someone from finding the edit page on their own: if they add "/edit" onto the end of the URL they can edit the animal. You'd need this authentication in your controller to prevent that from happening. %>
     <% if @animal.user_id == current_user.id %>
     <%= link_to "Edit, if you're #{@animal.name}!", edit_animal_path %>
     <% end %>

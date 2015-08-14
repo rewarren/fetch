@@ -48,6 +48,7 @@ nav a:active {
 }
 
 .about {
+  /*If you're trying to get this centered, use margin:0px auto;*/
   margin: 0px 300px;
   text-align: center;
   font-family: cursive;
